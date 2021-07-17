@@ -1,0 +1,135 @@
+:root{
+    --colorYellow : #FFBD4A;
+
+    --dimensionCircle1 : 100px;
+    --halfDimensionCircle1 : calc(var(--dimensionCircle1)/2);
+    --WidthShape2: 80px;
+    --HeightShape2: 200px;
+    --WidthShape3: 90px;
+    --HeightShape3: 200px;
+    --WidthShape4: 50px;
+    --HeightShape4: 200px;
+    --WidthLine: 15px;
+
+}
+
+.containerLogo{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(6, 6, 58);
+    position: relative;
+}
+
+.circle1{
+    width: var(--dimensionCircle1);
+    height: var(--dimensionCircle1);
+    background-color: var(--colorYellow);
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50vw - var( --halfDimensionCircle1));
+    top: calc(50vh - var( --halfDimensionCircle1));
+}
+.shape2{
+    width: var(--WidthShape2);
+    height: var(--HeightShape2);
+    position: absolute;   
+    transform-origin: bottom center;
+    left: calc(50vw - calc(var(--WidthShape2) / 2));
+    top: calc(50vh - var(--HeightShape2));
+    animation: 3s animationShape2 ease forwards infinite;
+}
+
+.shape2 .circle{
+    width: 100%;
+    height: var(--WidthShape2);
+    background-color: var(--colorYellow);
+    border-radius: 50%;
+}
+.shape2 .line{
+    width: var(--WidthLine);
+    height: 80%;
+    background-color: var(--colorYellow);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes animationShape2 {
+    0% {
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(-145deg);  
+    }
+}
+
+.shape3{
+    width: var(--WidthShape3);
+    height: var(--HeightShape3);
+    position: absolute;   
+    transform-origin: bottom center;
+    left: calc(50vw - calc(var(--WidthShape3) / 2));
+    top: calc(50vh - var(--HeightShape3));
+    animation: 3s animationShape3 ease forwards infinite;
+}
+
+.shape3 .circle{
+    width: 100%;
+    height: var(--WidthShape3);
+    background-color: var(--colorYellow);
+    border-radius: 50%;
+}
+.shape3 .line{
+    width: var(--WidthLine);
+    height: 80%;
+    background-color: var(--colorYellow);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes animationShape3 {
+    0% {
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(-45deg);  
+    }
+}
+
+.shape4{
+    width: var(--WidthShape4);
+    height: var(--HeightShape4);
+    position: absolute;   
+    transform-origin: bottom center;
+    left: calc(50vw - calc(var(--WidthShape4) / 2));
+    top: calc(50vh - var(--HeightShape4));
+    animation: 3s animationShape4 ease forwards infinite;
+}
+
+.shape4 .circle{
+    width: 100%;
+    height: var(--WidthShape4);
+    background-color: var(--colorYellow);
+    border-radius: 50%;
+}
+.shape4 .line{
+    width: var(--WidthLine);
+    height: 80%;
+    background-color: var(--colorYellow);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes animationShape4 {
+    0% {
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(75deg);  
+    }
+}
